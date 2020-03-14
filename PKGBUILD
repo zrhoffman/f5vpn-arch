@@ -4,7 +4,7 @@ pkgver=7171.2018.0808.1
 pkgrel=3
 pkgdesc='F5 VPN helper application for use with a browser for F5Networks BIG-IP APM 13.0'
 arch=('x86_64')
-source=("https://it.emory.edu/vpntools/linux_f5vpn.x86_64.rpm"
+source=('https://it.emory.edu/vpntools/linux_f5vpn.x86_64.rpm'
         'LICENSE')
 sha256sums=('4aa5468417fde0122794b502ff494f5215088f323ebf7a0d38ad8da4a29870dd'
             'fc05e3488df94817af182605042f78ed6aa0fdddb1b4a38875053a0b91d756c3')

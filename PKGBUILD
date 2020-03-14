@@ -17,7 +17,7 @@ license=('commercial')
 package() {
     (
     cd "${srcdir}/opt/f5/vpn"
-    chmod u+s svpn
+    chmod u+s svpn # f5vpn should not be run as non-root, but it calls svpn which must be run as root
     install -Dm644 "com.f5.${pkgname}.desktop" "${pkgdir}/usr/share/applications/com.f5.${pkgname}.desktop"
     install -dm755 "${pkgdir}/usr/bin/"
     install -dm755 "${pkgdir}/usr/local/lib/F5Networks/SSLVPN/var/run" # For svpn.pid
@@ -25,10 +25,12 @@ package() {
         ln -s "/opt/f5/vpn/${executable}" "${pkgdir}"/usr/bin/${executable}
     done
 
+    # Use system QT libraries
     for library in lib/*.so.*; do
         ln -sf "/usr/${library%%.so.*}.so" "$library"
     done
 
+    # Use system QT libraries
     for plugin in platforms/*.so; do
         ln -sf "/usr/lib/qt/plugins/${plugin}" "$plugin"
     done

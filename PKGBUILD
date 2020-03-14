@@ -11,6 +11,7 @@ sha256sums=('4aa5468417fde0122794b502ff494f5215088f323ebf7a0d38ad8da4a29870dd'
 md5sums=('06b5eeb0d066239e24b35f02f78a5d7f'
         '6e606f0137167b7c584c842405dab071')
 depends=(icu openssl qt5-base qt5-webkit)
+url='https://support.f5.com/csp/article/K32311645#link_04_05'
 license=('commercial')
 
 package() {

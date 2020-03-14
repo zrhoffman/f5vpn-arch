@@ -34,7 +34,7 @@ package() {
 
     for resolution in 16 24 32 48 64 96 128 256 512 1024; do
         install -Dm644 "logos/${resolution}x${resolution}.png" \
-                        "${pkgdir}/usr/share/icons/hicolor/${resolution}x${resolution}/apps/f5vpn.png"
+                        "${pkgdir}/usr/share/icons/hicolor/${resolution}x${resolution}/apps/${pkgname}.png"
     done
     )
     install -Dm644 'LICENSE' "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"

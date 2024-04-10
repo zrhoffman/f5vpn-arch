@@ -4,7 +4,7 @@ pkgver=7246.2024.0201.1
 pkgrel=2
 pkgdesc='VPN client using the Point-to-Point Protocol to connect to F5Networks BIG-IP APM'
 arch=('x86_64')
-mirror=new.vpn.msu.edu
+mirror=vpn.chapman.edu
 source=('LICENSE'
         'no-desktop-file-dbus.patch')
 source_x86_64=("linux_${pkgname}-${pkgver}-${pkgrel}.${CARCH}.rpm::https://${mirror}/public/download/linux_${pkgname}.${CARCH}.rpm")

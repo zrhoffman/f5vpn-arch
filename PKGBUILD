@@ -2,7 +2,7 @@
 pkgname=f5vpn
 pkgver=7246.2024.0201.1
 _pkgver_aarch64=7245.2023.1006.1
-pkgrel=3
+pkgrel=4
 pkgdesc='VPN client using the Point-to-Point Protocol to connect to F5Networks BIG-IP APM'
 arch=(aarch64 x86_64)
 mirror=vpn.chapman.edu
@@ -42,9 +42,8 @@ package() {
   install -Dm644 "com.f5.${pkgname}.desktop" "${pkgdir}/usr/share/applications/com.f5.${pkgname}.desktop"
   install -dm755 "${pkgdir}/usr/bin/"
   install -dm755 "${pkgdir}/usr/local/lib/F5Networks/SSLVPN/var/run" # For svpn.pid
-  for executable in $pkgname tunnelserver; do
-      ln -s "/opt/f5/vpn/${executable}" "${pkgdir}"/usr/bin/${executable}
-  done
+  ln -s '/opt/f5/vpn/f5vpn_launch_helper.sh' "${pkgdir}/usr/bin/${pkgname}"
+  ln -s '/opt/f5/vpn/tunnelserver' "${pkgdir}/usr/bin/tunnelserver"
 
   # Use system Qt libraries
   for library in lib/*.so.*; do

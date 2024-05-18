@@ -2,7 +2,7 @@
 pkgname=f5vpn
 pkgver=7246.2024.0201.1
 _pkgver_aarch64=7245.2023.1006.1
-pkgrel=4
+pkgrel=5
 pkgdesc='VPN client using the Point-to-Point Protocol to connect to F5Networks BIG-IP APM'
 arch=(aarch64 x86_64)
 mirror=vpn.chapman.edu
@@ -22,7 +22,7 @@ sha256sums_x86_64=('5088f827a4e338f31588aa5b19823ebf40376fa043bee09b49c59bace112
 sha256sums=('85f06be8b8e438c4cefdad9e8975d1c48fd53446fe35e95d4260ba14ac7f98fd'
 'fadc7ae9c2297a93101a98c24ed63087a05a6e24bb33ba4b795bfd4339dba7cf'
 '3ecd8a10941a7d81b9d16aecdf6ac9caa1f957e32a2d2c65bde5181abd1fcb73')
-depends=('icu>=73.2-2' openssl qt5-base 'qt5-webkit>=5.212.0alpha4-22')
+depends=('icu>=74.2-2' openssl qt5-base 'qt5-webkit>=5.212.0alpha4-23')
 provides=("${pkgname}")
 url='https://support.f5.com/csp/article/K32311645#link_04_05'
 license=('commercial')

@@ -14,9 +14,9 @@ Usage
    .. code-block:: javascript
 
        resourceType = "network_access";
-       with (new XMLHttpRequest()) {
-           open("GET", `https://${location.host}:${location.port}/vdesk/resource_list.xml?resourcetype=res`);
-           onload = () => console.log(`f5-vpn://${location.host}:${location.port || 443}/?server=${location.host}&resourcename=${responseXML.querySelector(`list[type=${resourceType}] entry`).textContent}&resourcetype=${resourceType}&cmd=launch&protocol=https&port=${location.port || 443}&sid=${document.cookie.match(/MRHSession=(.*?); /)[1]}`);
+       with (new XMLHttpRequest()) with (location) {
+           open("GET", `https://${host}:${port}/vdesk/resource_list.xml?resourcetype=res`);
+           onload = () => console.log(`f5-vpn://${host}:${port || 443}/?server=${host}&resourcename=${responseXML.querySelector(`list[type=${resourceType}] entry`).textContent}&resourcetype=${resourceType}&cmd=launch&protocol=https&port=${port || 443}&sid=${document.cookie.match(/MRHSession=(.*?); /)[1]}`);
            send();
        }
 
@@ -46,7 +46,7 @@ CLI-Only Alternatives
 
 * `kayrus/gof5 <https://github.com/kayrus/gof5>`_ - FOSS
 
-* `zrhoffman/svpn-login <https://github.com/zrhoffman/svpn-login>`_
+* `zrhoffman/svpn-login <https://github.com/zrhoffman/svpn-login>`_ CLI wrapper for ``svpn``, the proprietary ``f5vpn`` backend
 
 * `zrhoffman/f5vpn-login <https://github.com/zrhoffman/f5vpn-login>`_ - FOSS, but very slow due to no PPP-over-DTLS
 

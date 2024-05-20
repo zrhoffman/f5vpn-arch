@@ -1,14 +1,14 @@
 pkgbase = f5vpn
 	pkgdesc = VPN client using the Point-to-Point Protocol to connect to F5Networks BIG-IP APM
-	pkgver = 7246.2024.0201.1
-	pkgrel = 5
+	pkgver = 7247.2024.0425.1
+	pkgrel = 1
 	url = https://support.f5.com/csp/article/K32311645#link_04_05
 	arch = aarch64
 	arch = x86_64
 	license = commercial
-	depends = icu>=74.2-2
 	depends = openssl
 	depends = qt5-base
+	depends = icu>=74.2-2
 	depends = qt5-webkit>=5.212.0alpha4-23
 	provides = f5vpn
 	source = LICENSE
@@ -21,10 +21,10 @@ pkgbase = f5vpn
 	b2sums = d64f0d1a4d413701dd31464c086b84049fbf5919774f2440a8d9f139deedf8b9e83a229ad59cf5434c5ccd33a0151bb9621d941096b4cc1d641c86681f81eafa
 	b2sums = 5be3f5ebd0358e022c85081b45bc23b1e847542ae9035bece95c40fa5113a1fd9159ced013950d237206c2e6be94caa38b9d6414ea29ab65cd80043a2dfbfe5a
 	source_aarch64 = linux_f5vpn-7245.2023.1006.1.aarch64.deb::https://remote.abdn.ac.uk/public/download/linux_f5vpn.aarch64.deb
-	sha256sums_aarch64 = 56c3511bed396241210484a1e14c251e93ce156c89c8a5964439a4628505483c
-	b2sums_aarch64 = 56020ea5281c5c3305055dd88c5c378231765bdacc1c41d2539ff66ea94cfe82ec38bb482137a6aa20e9ff147c12163f3a81ec34b65590d6a3c67c012eaf9199
-	source_x86_64 = linux_f5vpn-7246.2024.0201.1.x86_64.deb::https://vpn.chapman.edu/public/download/linux_f5vpn.x86_64.deb
-	sha256sums_x86_64 = 5088f827a4e338f31588aa5b19823ebf40376fa043bee09b49c59bace112e6c5
-	b2sums_x86_64 = 7d101638f437bce3f309670765c2de8bdad47d4b01a0b24dd741aabf68625c55d39cf2a4700514f622a7ff8da3f88353e2013f9b463310e58e83408819dd687e
+	sha256sums_aarch64 = 69f59bbf2762bfa5d00db953640ee86bfbcfc1ad41389a1ec82983e1f77e7607
+	b2sums_aarch64 = 62d210714bf3428a17f2cbe567c6ce61dbfa2009819a8641a8eb98883ce0839dfecdac7cd9e4eb6f28e60d7c63801f54c3a01b5153eda34457a7ac12bc08b0a8
+	source_x86_64 = linux_f5vpn-7247.2024.0425.1.x86_64.deb::https://remote.abdn.ac.uk/public/download/linux_f5vpn.x86_64.deb
+	sha256sums_x86_64 = d061d6a3d4fc41f449c75ce7d24cc9c740b6f305960f59e653c6c56fc881e3f1
+	b2sums_x86_64 = ca284f031edb584a56578e0834f6c0e807f03aee0475dd05a3ea2b1c70692a4c742d5e6e1880376c4f012757b6465a4b19cd27eeba70403fe6fdd64eddcca829
 
 pkgname = f5vpn

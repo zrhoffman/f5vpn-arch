@@ -1,16 +1,14 @@
 # Maintainer: Zach Hoffman <zach@zrhoffman.net>
 pkgname=f5vpn
 pkgver=7247.2024.0425.1
-_pkgver_aarch64=7245.2023.1006.1
-pkgrel=1
+pkgrel=2
 pkgdesc='VPN client using the Point-to-Point Protocol to connect to F5Networks BIG-IP APM'
 arch=(aarch64 x86_64)
 mirror=remote.abdn.ac.uk
-mirror_aarch64=remote.abdn.ac.uk
 source=('LICENSE'
         'no-desktop-file-dbus.aarch64.patch'
         'no-desktop-file-dbus.x86_64.patch')
-source_aarch64=("linux_${pkgname}-${_pkgver_aarch64}.aarch64.deb::https://${mirror_aarch64}/public/download/linux_${pkgname}.aarch64.deb")
+source_aarch64=("linux_${pkgname}-${pkgver}.aarch64.deb::https://${mirror}/public/download/linux_${pkgname}.aarch64.deb")
 source_x86_64=("linux_${pkgname}-${pkgver}.x86_64.deb::https://${mirror}/public/download/linux_${pkgname}.x86_64.deb")
 b2sums_aarch64=('62d210714bf3428a17f2cbe567c6ce61dbfa2009819a8641a8eb98883ce0839dfecdac7cd9e4eb6f28e60d7c63801f54c3a01b5153eda34457a7ac12bc08b0a8')
 b2sums_x86_64=('ca284f031edb584a56578e0834f6c0e807f03aee0475dd05a3ea2b1c70692a4c742d5e6e1880376c4f012757b6465a4b19cd27eeba70403fe6fdd64eddcca829')
@@ -22,7 +20,8 @@ sha256sums_x86_64=('d061d6a3d4fc41f449c75ce7d24cc9c740b6f305960f59e653c6c56fc881
 sha256sums=('85f06be8b8e438c4cefdad9e8975d1c48fd53446fe35e95d4260ba14ac7f98fd'
 'fadc7ae9c2297a93101a98c24ed63087a05a6e24bb33ba4b795bfd4339dba7cf'
 '3ecd8a10941a7d81b9d16aecdf6ac9caa1f957e32a2d2c65bde5181abd1fcb73')
-depends=(openssl qt5-base 'icu>=74.2-2' 'qt5-webkit>=5.212.0alpha4-23')
+makedepends=(qt5-base)
+depends=(openssl qt5-base)
 provides=("${pkgname}")
 url='https://support.f5.com/csp/article/K32311645#link_04_05'
 license=('commercial')
@@ -47,6 +46,9 @@ package() {
 
   # Use system Qt libraries
   for library in lib/*.so.*; do
+      if [[ "$library" == lib/libicu* || "$library" == lib/libQt5WebKit* ]]; then
+        continue
+      fi
       ln -sf "/usr/${library%%.so.*}.so" "$library"
   done
 

@@ -46,8 +46,8 @@ CLI-Only Alternatives
 
 * `kayrus/gof5 <https://github.com/kayrus/gof5>`_ - FOSS
 
+* `openvpn <https://www.infradead.org/openconnect/f5.html>`_ - FOSS (use --cookie-on-stdin for 2FA)
+
 * `zrhoffman/svpn-login <https://github.com/zrhoffman/svpn-login>`_ CLI wrapper for ``svpn``, the proprietary ``f5vpn`` backend
 
 * `zrhoffman/f5vpn-login <https://github.com/zrhoffman/f5vpn-login>`_ - FOSS, but very slow due to no PPP-over-DTLS
-
-* `openvpn <https://www.infradead.org/openconnect/f5.html>`_ - FOSS (use --cookie-on-stdin for 2FA)

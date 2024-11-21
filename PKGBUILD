@@ -1,10 +1,10 @@
 # Maintainer: Zach Hoffman <zach@zrhoffman.net>
 pkgname=f5vpn
 pkgver=7250.2024.1008.1
-pkgrel=1
+pkgrel=2
 pkgdesc='VPN client using the Point-to-Point Protocol to connect to F5Networks BIG-IP APM'
 arch=(aarch64 x86_64)
-mirror=vpn01.montgomerycollege.edu
+mirror=vpn.cc.sophia.ac.jp
 source=('LICENSE'
         'no-desktop-file-dbus.aarch64.patch'
         'no-desktop-file-dbus.x86_64.patch')
@@ -49,12 +49,12 @@ package() {
       if [[ "$library" == lib/libicu* || "$library" == lib/libQt5WebKit* ]]; then
         continue
       fi
-      ln -sf "/usr/${library%%.so.*}.so" "$library"
+      ln -sf "$(<<<"/usr/${library%%.so.*}.so" sed 's|/usr/lib|/usr/lib64|g')" "$library"
   done
 
   # Use system Qt libraries
   for plugin in platforms/*.so; do
-      ln -sf "/usr/lib/qt/plugins/${plugin}" "$plugin"
+      ln -sf "/usr/lib64/qt/plugins/${plugin}" "$plugin"
   done
 
   for resolution in 16 24 32 48 64 96 128 256 512 1024; do

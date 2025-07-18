@@ -1,10 +1,10 @@
 # Maintainer: Zach Hoffman <zach@zrhoffman.net>
 pkgname=f5vpn
 pkgver=7252.2025.0318.1
-pkgrel=2
+pkgrel=3
 pkgdesc='VPN client using the Point-to-Point Protocol to connect to F5Networks BIG-IP APM'
 arch=(aarch64 x86_64)
-mirror=vpn-mgmt.it.mtu.edu
+mirror=vpn.uts.edu.au
 source=('LICENSE'
         'no-desktop-file-dbus.aarch64.patch'
         'no-desktop-file-dbus.x86_64.patch')

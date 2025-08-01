@@ -1,22 +1,22 @@
 # Maintainer: Zach Hoffman <zach@zrhoffman.net>
 pkgname=f5vpn
-pkgver=7252.2025.0318.1
-pkgrel=3
+pkgver=7253.2025.0725.1
+pkgrel=1
 pkgdesc='VPN client using the Point-to-Point Protocol to connect to F5Networks BIG-IP APM'
 arch=(aarch64 x86_64)
-mirror=vpn.uts.edu.au
+mirror=vpn-mgmt.it.mtu.edu
 source=('LICENSE'
         'no-desktop-file-dbus.aarch64.patch'
         'no-desktop-file-dbus.x86_64.patch')
 source_aarch64=("linux_${pkgname}-${pkgver}.aarch64.deb::https://${mirror}/public/download/linux_${pkgname}.aarch64.deb")
 source_x86_64=("linux_${pkgname}-${pkgver}.x86_64.deb::https://${mirror}/public/download/linux_${pkgname}.x86_64.deb")
-b2sums_aarch64=('79d2a8549edc1cfe0a35658c8d265b36ba4bf5e67f7afd9f3e73cfcfc31b89995c05e794f13689410ed05f0bac19e7ee8c6bbdbaa6845a66e8f451e80ef2e57d')
-b2sums_x86_64=('2b91c4ac43b70d3e244d888cc7ca09d9ac4c3fdacfbe002c1a3eb37a27fca889c273f75928c00e82f48cb43b0e57c39d81f3b319ad15ad13f2109d7fdd96225a')
+b2sums_aarch64=('246fe265e879f746f393778d3acdb163bce5c6ed2883ad452a43d0113024ba5cc244413b349cbcacc7d1616969660eb810a75fdc5da8f0c0f699b3106d68c41e')
+b2sums_x86_64=('e1ed6384890ea74a60b0a45dda5123fb1e3967881412eb0cc58342f0443f34e00199089004763aa917d45f21bfc66ae23cabef7e30677b11858c3b79d6464510')
 b2sums=('c864e69799ffc4c13bf8af7d76bcc8beed195d9a41acb01d459aaa0c3cd5bae75290ef7be1fa6a0bfd6472e1c3f8df3a7f5d59767861ded0dc4a373a3ead447c'
 'd64f0d1a4d413701dd31464c086b84049fbf5919774f2440a8d9f139deedf8b9e83a229ad59cf5434c5ccd33a0151bb9621d941096b4cc1d641c86681f81eafa'
 '5be3f5ebd0358e022c85081b45bc23b1e847542ae9035bece95c40fa5113a1fd9159ced013950d237206c2e6be94caa38b9d6414ea29ab65cd80043a2dfbfe5a')
-sha256sums_aarch64=('0303944bb04c94f006eee59386df89b18b4e1bb46d879c2d7d9fe2736efb4196')
-sha256sums_x86_64=('156660e9af1ada995df395de6297386ca59e645b48ee4418c0931634890b5bc7')
+sha256sums_aarch64=('97d1eff36732d182485918d118341be756b1cc27a1e2a92affb62f07fb7c11bc')
+sha256sums_x86_64=('147f0660ad49955667ddd7211d0eb119fa343cfbeeacdd973734709a93e8b4e9')
 sha256sums=('85f06be8b8e438c4cefdad9e8975d1c48fd53446fe35e95d4260ba14ac7f98fd'
 'fadc7ae9c2297a93101a98c24ed63087a05a6e24bb33ba4b795bfd4339dba7cf'
 '3ecd8a10941a7d81b9d16aecdf6ac9caa1f957e32a2d2c65bde5181abd1fcb73')
